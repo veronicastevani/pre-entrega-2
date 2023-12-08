@@ -7,25 +7,56 @@
     <title>Casa Bosco - Contacto</title>
     <link rel="short icon" href="../img/Logo-Navedador.jpeg">
     <link rel="stylesheet" href="../css/estilo.css">
+
+      <!--boostrap-->
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
 </head>
 
 <body>
-    <header><!--menu de navegacion-->
-        <nav id="menu">
-            <ul>
-                <li><a href="../index.html" target="_self">Inicio</a></li>
-                <li><a href="./arquitectura.html" target="_self">Arquitectura</a></li>
-                <li><a href="./Interiorismo.html" target="_self">Interiorismo</a></li>
-                <li><a href="./paisajismo.html" target="_self">Paisajismo</a></li>
-                <li id="menu-seleccionado"><a href="./contactos.html" target="_self">Contacto</a></li>
+
+    <header>
+        
+        <!--menu de navegacion-->
+        
+        <div class="contenedor">
+
+            <!-- botón para mobile-->
+
+            <input type="checkbox" id="menu-check">
+            <label id="menu-celu"  for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+
+            <!-- lista del menú - general-->
+            
+            <nav id="menu" class="container-fluid">
+
+            <ul class="row">
+
+                  <!--BOOSTRAP - breakpoint 12 columnas-->
+
+                <li class="col-lg-2 col-md-2 col-sm-12">
+                    <a href="../index.html">Inicio</a></li>
+                <li class="col-lg-2 col-md-2 col-sm-12">
+                    <a href="./arquitectura.html">Arquitectura</a></li>
+                <li class="col-lg-2 col-md-2 col-sm-12">
+                    <a href="./Interiorismo.html">Interiorismo</a></li>
+                <li class="col-lg-2 col-md-2 col-sm-12">
+                    <a href="./paisajismo.html">Paisajismo</a></li>
+                <li id="menu-seleccionado" class="col-lg-2 col-md-2 col-sm-12">
+                    <a href="./contactos.html">Contacto</a></li>
             </ul>
         </nav>
+        
     </header>
 
-    <main><!--contenido de la seccion-->
+    <main class="container-fluid"><!--contenido de la seccion-->
 
-        <div id="logo">
-            <img src="../img/Logo - Contacto.png" alt="Logo-Contacto" width="300" height="auto">
+        <div class="row">
+            <img class="col-12" src="../img/Logo - Contacto.png" alt="Logo-Contacto" width="300" height="auto">
         </div>
 
         <h1>Contactos</h1>
@@ -75,13 +106,19 @@
 
         <div>
             <a href="https://wa.me/5492477450615" target="_blank">
-            <img src="../img/Logo-Whatspp-Color.png" alt="Logo-Whatspp-Color" width="50" height="50"></a>
+            <img id="logo-general" src="../img/Logo-Whatspp-Color.png" alt="Logo-Whatspp-Color" width="50" height="50"></a>
         </div>
 
     </main>
 
-    <footer id="pie"><!--pie de pagina-->
-        <img src="../img/Pie-de-página.png" alt="Pie-de-página">
+    <footer class="container-fluid"><!--pie de pagina-->
+        
+        <!--BOOSTRAP - breakpoint 12 columnas-->
+
+       <div class="row">
+            <p id="footer" class="col-12">Pergamino, Buenos Aires</p>
+        </div>
+
     </footer>
 
 

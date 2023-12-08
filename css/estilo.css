@@ -3,49 +3,112 @@
 
 @media (max-width: 767px) {
 
-    /*Estilo título del Menú*/
-
-    h4 {
-        display: inline;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+
+
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+
+     /*ocultar checkbox*/
+    #menu-check{
+        display: none;
+    }
+
+    /*abrir menu*/
+
+    header div.contenedor {
+        display: flex;
+        place-content: space-between;
+    }
+
+    #menu-check:not(:checked) ~ nav {
+        display: none;
+    }
+
+    #menu-check:checked ~ nav{
+        display: block;
+    }
+    
+   #menu-celu {
+    display: block;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 3px solid;
+    border-radius: 0.3em;
+    margin-left: 91%;
+    z-index: 9999;
+   }
+
+   #menu-celu:hover {
+    color:white;
+    background:black;
+   }
+
+   #menu-cerrar {
+    display: none;
+   }
+
+   #menu-check:checked ~ label #menu-abrir {
+    display: none;
+   }
+
+   #menu-check:checked ~ label #menu-cerrar {
+    display: block;
+    color: white;
+   }
+
+
+    #menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: black;
+        padding-top: 0.5em;
+        padding-right: 4em;
+        opacity: 0.8;
+        color: white;
+    }
+    
 
     /*Estilo lista del Menú*/
 
     #menu ul {
-        list-style: none;
+        list-style-type: none;
         margin: 0;
-        padding: 0;
-        background-color: white;
         font-size: large;
         font-family: sans-serif;
+}
 
-    }
+#menu a {
+    display:block;
+    text-align: right;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+   
+}
 
-    #menu a {
-        display: flex;
-        color: #9dae6f;
-        text-decoration: none;
-        background-color:white ;
-        padding: 20px;
-        justify-self: center;
-    }
+/*carrusel*/
 
-    #menu-seleccionado a {
-        background-color: #9dae6f;
-        color: white;
-        text-decoration: none;
-    }
+#carouselExampleFade {
+    z-index: -1;
+}
 
-    /*Ocultar o activar la lista del menu*/
 
-    .check input + nav {
-        display: none;
-    }
 
-    .check input:checked + nav {
-        display: block;
-    }
+
+
+
+   
+
 
     /*borrar foto escritorio*/
 
@@ -139,63 +202,116 @@
         width: 50%;  
    }
 
+   
+    /*Estilo deL footer*/
+
+    #footer { 
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-family: sans-serif;
+        font-weight: lighter;
+        padding: 1%;
+        text-align: center;
+    }
+
+       /* estilo formulario */
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+form input{
+    background-color: #9dae6f;
+    color: white;
+}
+
+form label{
+    color: black;
+    font-family: sans-serif;
+}
+
+form textarea{
+    background-color: #9dae6f;
+    color: white;
+}
+
+#maps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+
 }
 
 
 /*ESCRITORIO*/
 
 @media (min-width: 768px) {
-
-
-    /*Ocultar el título y la chackbox del menú mobile*/
-
-    .check input {
-        display: none;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    h4 {
-        display: none;
+    .row {
+        margin: 0;
+        padding: 0;
     }
 
-  /*borrar foto mobile*/
+  /*borrar foto y menú mobile*/
 
   #foto-mobile{
     display: none;
 }
 
+#menu-celu, #menu-check{
+    display: none;
+}
 
     /*Estilo lista del Menú*/
 
+    header{
+        background-color: black;
+        opacity: 0.8;
+}
+
     #menu {
         display: flex;
-        justify-content: end;
-        position: fixed;
+        justify-content: center;
     }
     
     #menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            background-color: white;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            list-style-type: none;
+            margin: 0px;
+            padding: 20px;
+            opacity: 0.8;
             font-size: large;
             font-family: sans-serif;
-            position: fixed;
+            font-weight: bolder;
     }
     
     #menu a {
-        display: flex;
-        color: #9dae6f;
+        color: white;
         text-decoration: none;
-        background-color:white ;
         padding: 20px;
-        justify-self: center;
-        
+        margin: 0px;
     }
     
     #menu-seleccionado a {
-        background-color: #9dae6f;
-        color: white;
+        background-color: white;
+        color:black;
         text-decoration: none;
+        margin: opx;
     }
 
 
@@ -221,6 +337,10 @@
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         font-style: normal;
         font-size: medium;
+    }
+
+    .bloque-de-texto {
+        background-color: whitesmoke;
     }
 
     .texto-inicio {
@@ -249,6 +369,8 @@
         font-weight: bolder;
     }
 
+   
+
     /*Estilo de íconos*/
 
     .iconos {
@@ -264,10 +386,53 @@
         margin-top: 2%;
         margin-bottom: 2%;
     }
- 
 
+    #logo img{
+        width: fit-content;
+    }
+
+    /*Estilo deL footer*/
+
+    #footer { 
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-family: sans-serif;
+        font-weight: lighter;
+        padding: 1%;
+        text-align: center;
+    }
+
+    /* estilo formulario */
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
+form input{
+    background-color: #9dae6f;
+    color: white;
+}
 
+form label{
+    color: black;
+    font-family: sans-serif;
+}
 
+form textarea{
+    background-color: #9dae6f;
+    color: white;
+}
+
+#maps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
 
